@@ -1,0 +1,31 @@
+	>> SOURCE FORMAT FREE
+IDENTIFICATION DIVISION.
+PROGRAM-ID. coboltut17.
+
+DATA DIVISION.
+
+WORKING-STORAGE SECTION.
+01 Table1.
+	02 Friends PIC X(15) OCCURS 4 TIMES.
+	
+01 CustTable.
+	02 CustName OCCURS 5 TIMES.
+		03 FName PIC X(15).
+		03 LName PIC X(15).
+	
+PROCEDURE DIVISION.
+MOVE 'Joy' TO Friends(1).
+MOVE 'WILLOW' TO Friends(2).
+MOVE 'Ivy' TO Friends(3).
+
+DISPLAY Friends(1).
+DISPLAY Table1.
+
+MOVE 'Paul' TO FName(1).
+MOVE 'Smith' TO LName(1).
+MOVE 'Sally' TO FName(2).
+MOVE 'Smith' TO LName(2).
+DISPLAY CustName(1).
+DISPLAY CustTable.
+
+STOP RUN.
